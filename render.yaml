@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: confidentiality-classifier
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python chat_connect.py
+    plan: free
