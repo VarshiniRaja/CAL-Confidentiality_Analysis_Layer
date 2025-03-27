@@ -1,8 +1,15 @@
 from flask import Flask, request, jsonify
 import torch
 from transformers import BertTokenizer, BertForSequenceClassification
+from huggingface_hub import login
+import os
 
 app = Flask(__name__)
+
+hf_token = os.getenv("HUGGINGFACE_HUB_TOKEN")
+if hf_token:
+    login(token=hf_token)
+
 
 # Load trained model and tokenizer
 model = BertForSequenceClassification.from_pretrained("VarshiniRaja/my-confidentiality-model")
@@ -36,6 +43,5 @@ def receive_chat_data():
 import os
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)
+    pass  # Render will use gunicorn to run the app
 
