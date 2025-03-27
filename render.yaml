@@ -3,5 +3,5 @@ services:
     name: confidentiality-classifier
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python chat_connect.py
+    startCommand: "gunicorn -w 1 -b 0.0.0.0:$PORT chat_connect:app"
     plan: free
