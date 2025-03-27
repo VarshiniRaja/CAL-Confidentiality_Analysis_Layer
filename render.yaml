@@ -1,7 +1,6 @@
 services:
   - type: web
-    name: confidentiality-classifier
+    name: confidential-model-api
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: "gunicorn -w 1 -b 0.0.0.0:$PORT chat_connect:app"
-    plan: free
+    startCommand: gunicorn -w 1 -b 0.0.0.0:$PORT chat_connect:app
