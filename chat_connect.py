@@ -28,6 +28,10 @@ def classify_confidentiality(prompt):
         predicted_label = torch.argmax(outputs.logits, dim=-1).item()
     return predicted_label
 
+@app.route('/', methods=['GET'])
+def home():
+    return "App is running!", 200
+
 @app.route('/receive_chat_data', methods=['POST'])
 def receive_chat_data():
     data = request.json
