@@ -5,11 +5,11 @@ from huggingface_hub import login
 import os
 
 app = Flask(__name__)
-
+print("Start2")
 hf_token = os.getenv("HUGGINGFACE_HUB_TOKEN")
 if hf_token:
     login(token=hf_token)
-
+print("Start3")
 
 # Load trained model and tokenizer
 model = BertForSequenceClassification.from_pretrained("VarshiniRaja/my-confidentiality-model")
@@ -43,5 +43,6 @@ def receive_chat_data():
 import os
 
 if __name__ == '__main__':
+    print("Start1")
     pass  # Render will use gunicorn to run the app
 
