@@ -1,0 +1,33 @@
+# 🤖 Chatbot Integration Overview
+
+This repository also includes a custom-built **AI Chatbot** designed to interact with users while incorporating the **Confidentiality Analysis Layer (CAL)** to evaluate message sensitivity in real time.
+
+---
+
+## 🧰 What Powers the Chatbot?
+
+The chatbot was created using [**Chatling.ai**](https://chatling.ai), a no-code conversational AI builder platform.
+
+### ⚙️ Chatbot Details:
+
+- **Platform**: Chatling.ai
+- **Trained On**: Public resources and documents from  
+  🌐 [https://thepeoplevscoffee.com](https://thepeoplevscoffee.com)
+- **Integration**: Connected with the backend Flask API hosted on Render
+- **Use Case**: Customer support and interaction screening with confidentiality risk analysis
+
+---
+
+## 📌 Features
+
+- 💬 Natural conversational flow using AI-generated responses
+- 🔒 Real-time **confidentiality evaluation** of each user message
+- 🔁 Feedback loop between Chatling and Render backend
+- 🧠 Built without writing any code — purely through Chatling's intuitive interface
+
+---
+
+## 📸 Builder Image
+present in the main folder
+
+
